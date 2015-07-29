@@ -1,6 +1,3 @@
-;; hier ist die GEILE isearch farbe: #ee799f  xD
-;; hier ist auch noch mal die alte burlywood farbe: #D5A05A
-
 (defun backward-kill-line (arg)
   "Kill ARG lines backward."
   (interactive "p")
@@ -79,13 +76,13 @@
 
 (column-number-mode t)
 (cua-mode t)
-(ido-mode t) ;; (die geile Sache) mit dem das man die Verzeichnisse usw. angezeigt bekommt.
+(ido-mode t) 
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
-(setq mouse-wheel-scroll-amount '(2 ((shift) . 2))) ;; one line at a time
+(setq mouse-wheel-scroll-amount '(2 ((shift) . 2)))
 
 (setq next-line-add-newline t)
 (add-hook 'prog-mode-hook 'highlight-numbers-mode)
@@ -94,7 +91,6 @@
 (add-to-list 'load-path "~/.emacs.d/modes/")
 (load "jai") 
 
-;; jonathan blow's thema 
 (set-face-attribute 'font-lock-builtin-face nil :foreground "white smoke")
 (set-face-attribute 'font-lock-keyword-face nil :foreground "white smoke")
 (set-face-attribute 'font-lock-string-face nil :foreground "dark gray")
@@ -106,104 +102,7 @@
 (set-face-attribute 'font-lock-preprocessor-face nil :foreground "#86FF5B")
 (set-face-attribute 'font-lock-variable-name-face nil :foreground "#D5A05A")
 
-;;(load-theme 'spolsky) 
 (set-face-attribute 'region nil :background "medium blue")
 (set-face-attribute 'region nil :foreground "#D5A05A")
 (set-face-background 'mode-line "tan2")
 (set-face-foreground 'mode-line "black")
-
-;;moe theme
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "#c678dd")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "#a1db00")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "#ff1f8b")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "#6c6c6c")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "#6c6c6c")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "#1f5bff")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "#00d7af")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "#ffd700")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "#c678dd")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#ff8700")
-
-;; burlywood thema
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "tan2")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "tan2")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "#burlywood2")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "burlywood4")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "burlywood4")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "tan2")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "#D5A05A")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "#D5A05A")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "tan2")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#D5A05A")
-
-;; hier die sache mit dem "berry" thema:
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "brown2")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "brown2")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "IndianRed2")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "yellow1")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "yellow")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "#7CE656")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "#7CE656")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "white smoke")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "#D5A05A")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#D5A05A")
-
-;; (require 'powerline)
-;; (powerline-default-theme)
-;; (set-face-attribute 'mode-line nil
-;;                     :foreground "Black"
-;;                     :background "dim gray"
-;;                     :box nil)
-
-
-;;(setq-default cursor-type 'bar) ;; hiermit kann man den cursor zu einem dünnen strich machen.
-
-;; default vim thema: 
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "purple")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "#a52a2a" :bold t)
-;; (set-face-attribute 'font-lock-string-face nil :foreground "#ff00ff")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "gray40")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "gray40")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "green4")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "ForestGreen" :bold t)
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "008b8b")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "purple")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#008b8b")
-
-
-;; casey's thema
-;;(add-to-list 'default-frame-alist '(font . "Liberation Mono-11.5"))
-;; (set-face-attribute 'default t :font "Liberation Mono-11.5")
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "#DAB98F")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "gray50")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "olive drab")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "gray50")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "burlywood3")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "DarkGoldenrod3")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "olive drab")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "burlywood3")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "burlywood3")
-
-;;atom theme
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "#c678dd")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "#c678dd")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "#98c379")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "#5C6370")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "#5C6370")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "#d19a66")
-;; (set-face-attribute 'font-lock-type-face nil :foreground "#CFCB90")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "#61afef")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "#8996A8")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#e5c07b")
-
-;;und hier die Sachen mit dem Visual Studio Thema
-;; (set-face-attribute 'font-lock-builtin-face nil :foreground "#81a2be")
-;; (set-face-attribute 'font-lock-keyword-face nil :foreground "#81a2be")
-;; (set-face-attribute 'font-lock-string-face nil :foreground "#cc6666")
-;; (set-face-attribute 'font-lock-comment-face nil :foreground "#b5bd68")
-;; (set-face-attribute 'font-lock-doc-face nil :foreground "#b5bd68")
-;; (set-face-attribute 'font-lock-constant-face nil :foreground "#86FF5B") ;; ist jetzt mit dem type face vertauscht.
-;; (set-face-attribute 'font-lock-type-face nil :foreground "#7CE656")
-;; (set-face-attribute 'font-lock-function-name-face nil :foreground "#61afef")
-;; (set-face-attribute 'font-lock-preprocessor-face nil :foreground "#c678dd")
-;; (set-face-attribute 'font-lock-variable-name-face nil :foreground "#CFCB90")
