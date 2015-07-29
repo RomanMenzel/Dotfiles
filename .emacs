@@ -87,7 +87,6 @@
 (setq next-line-add-newline t)
 (add-hook 'prog-mode-hook 'highlight-numbers-mode)
 
-;; der jai mode wird geladen (endlich).
 (add-to-list 'load-path "~/.emacs.d/modes/")
 (load "jai") 
 
